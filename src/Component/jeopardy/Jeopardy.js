@@ -36,7 +36,10 @@ class Jeopardy extends Component {
     let score = this.state.score;
     event.preventDefault();
     console.log("handleSubmit");
-    if (this.state.formData.answer === this.state.data.answer) {
+    if (
+      this.state.formData.answer.toLowerCase() ===
+      this.state.data.answer.toLowerCase()
+    ) {
       // console.log("match");
       this.setState((state, props) => ({
         // score: state.score + state.data.value,
